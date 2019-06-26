@@ -26,8 +26,7 @@ class CampaignList extends React.Component {
 
     return(
       <ul>
-        {/* <li>{campaigns[0].campaign_name}</li> */}
-        {campaigns}
+        { campaigns }
       </ul>
     )
   }
