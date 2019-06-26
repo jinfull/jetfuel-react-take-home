@@ -4,13 +4,13 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 class MediaItem extends React.Component {
   render() {
     let media = this.props.media;
-
+    
     if (!media) return null;
+
+    // logic to handle video or else (photo) media types
 
     let mediaPreview;
 
-
-    // logic to handle video or else (photo) media types
     if (media.media_type === 'video') {
       mediaPreview = 
         <div className='play-button-div'>

@@ -4,13 +4,23 @@ import CampaignItem from './CampaignItem';
 class CampaignList extends React.Component {
   constructor(props) {
     super(props);
+    // this.requestSuccess = null;
     this.state = {};
   }
 
   componentDidMount() {
+    let xhr = fetch('https://www.plugco.in/public/take_home_sample_feed');
+
+    console.log(xhr);
+
+    // if (xhr[[PromiseStatus]] === "rejected") {
+    //   return null;
+    // }
+
     fetch('https://www.plugco.in/public/take_home_sample_feed')
       .then(response => response.json())
-      .then(data => this.setState({ data }));
+      .then(data => this.setState({ data }))
+      .catch(error => alert(error.message));
   }
 
   render() {
@@ -23,7 +33,13 @@ class CampaignList extends React.Component {
       />
     ));
 
-    return(
+    // if (!this.requestSuccess) {
+    //   return (
+    //     <div className='apiBroke'>Sorry, wrong page!</div>
+    //   )
+    // }
+
+    return (
       <ul className='campaign-ul'>
         { campaigns }
       </ul>
