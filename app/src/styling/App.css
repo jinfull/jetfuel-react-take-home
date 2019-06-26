@@ -6,6 +6,7 @@
 .campaign-info {
   display: flex;
   flex-direction: row;
+  margin-bottom: 5px;
 }
 
 .campaign-logo {
@@ -14,6 +15,7 @@
   background-color: green;
   margin-right: 20px;
 }
+
 .campaign-details {
   display: flex;
   flex-direction: column;
@@ -21,4 +23,12 @@
 
 ul {
   list-style-type: none;
+}
+
+.campaign-li {
+  margin: 20px;
+}
+
+.campaign-logo {
+  border-radius: 20%;
 }

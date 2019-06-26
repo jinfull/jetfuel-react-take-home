@@ -3,15 +3,19 @@ import CampaignItemMedia from './CampaignItemMedia';
 
 class CampaignItem extends React.Component {
   render() {
-    if (!this.props.campaign) return null;
+    let campaign = this.props.campaign;
+
+    if (!campaign) return null;
+
+    console.log(campaign);
 
     return (
-      <li>
+      <li className='campaign-li'>
         <div className='campaign-info'>
-          <div className='campaign-logo'>hi</div>
+          <img className='campaign-logo' src={this.props.campaign.campaign_icon_url}></img>
           <div className='campaign-details'>
-            <div className='campaign-name'>{this.props.campaign.campaign_name}</div>
-            <div className='campaign-pay'>{this.props.campaign.pay_per_install} per install</div>
+            <div className='campaign-name'>{campaign.campaign_name}</div>
+            <div className='campaign-pay'>{campaign.pay_per_install} per install</div>
           </div>
         </div>
         <CampaignItemMedia campaign={this.props.campaign} />
