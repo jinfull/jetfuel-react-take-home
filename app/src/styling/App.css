@@ -25,7 +25,8 @@ ul {
 .campaign-info {
   display: flex;
   flex-direction: row;
-  margin-bottom: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 .campaign-logo {
@@ -53,7 +54,7 @@ ul {
 }
 
 .campaign-li {
-  margin: 15px;
+  margin: 10px 15px 0px 15px;
   border-bottom: 1px solid rgb(175, 175, 175);
   padding-bottom: 10px;
 }
@@ -64,11 +65,13 @@ ul {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  height: 100%;
+
+  /* Sidescroll */
   white-space: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  height: 100%;
 }
 
 .media-ul::-webkit-scrollbar {
@@ -80,19 +83,12 @@ ul {
   margin-right: 2%;
 }
 
-/* .media-preview {
-  height: 395px;
-  width: 250px;
-  border-radius: 10px;
-  border: 1px solid rgb(175, 175, 175);
-} */
 .media-preview {
   height: 200px;
   width: 110px;
   border-radius: 10px;
-  border: 1px solid rgb(175, 175, 175);
+  border: 1px solid rgb(210, 210, 210);
 }
-
 
 .media-bottom-row {
   display: flex;
@@ -111,4 +107,26 @@ ul {
 
 .media-button {
   cursor: pointer;
+}
+
+
+/* 
+
+*/
+.play-button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-button-div {
+    margin: 0 auto;
+   text-align: center;
+   position: relative;
+   display: inline-block;
+}
+
+i {
+  color: whitesmoke;
 }

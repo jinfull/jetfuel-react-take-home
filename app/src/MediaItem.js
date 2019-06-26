@@ -7,9 +7,28 @@ class MediaItem extends React.Component {
 
     if (!media) return null;
 
+    let mediaPreview;
+
+
+    // logic to handle video or else (photo) media types
+    if (media.media_type === 'video') {
+      mediaPreview = 
+        <div className='play-button-div'>
+          <a href={media.download_url}>
+            <img className='media-preview' src={media.cover_photo_url} alt='media preview' />
+            <div className='play-button-icon'><i className='fas fa-play'></i></div>
+          </a>
+        </div>
+    } else {
+      mediaPreview = 
+          <a href={media.download_url}>
+            <img className='media-preview' src={media.cover_photo_url} alt='media preview' />
+          </a>
+    }
+
     return (
       <li className='media-li'>
-        <a href={media.download_url}><img className='media-preview' src={media.cover_photo_url} alt='media preview'></img></a>
+        { mediaPreview }
         <div className='media-bottom-row'>
           <CopyToClipboard text={media.tracking_link}>
             <img className='media-button' src={require('./assets/link.png')} alt='link button'></img>
