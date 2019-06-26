@@ -1,44 +1,23 @@
 import React from 'react';
-import CampaignMedia from './CampaignMedia';
+import CampaignItemMedia from './CampaignItemMedia';
 
-var xhr;
-class Campaign extends React.Component {
+class CampaignItem extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      // ip_address: "..."
-    };
-
-    // this.processRequest = this.processRequest.bind(this);
+    this.state = {};
   }
 
   componentDidMount() {
-
     fetch('https://www.plugco.in/public/take_home_sample_feed')
       .then(response => response.json())
       .then(data => this.setState({ data }));
   }
 
-
-  // processRequest() {
-  //   if (xhr.readyState === 4 && xhr.status === 200) {
-  //     var response = JSON.parse(xhr.responseText);
-
-  //     console.log(response);
-
-  //     this.setState({
-  //       ip_address: response.ip
-  //     });
-  //   }
-  // }
-
-
   render() {
     if (!this.state.data) return null;
 
     let campaigns = this.state.data.campaigns;
-    console.log(campaigns);
+    // console.log(campaigns);
 
     return (
       <div>
@@ -50,10 +29,10 @@ class Campaign extends React.Component {
             <div className='campaign-pay'>{campaigns[1].pay_per_install} per install</div>
           </div>
         </div>
-        <CampaignMedia />
+        <CampaignItemMedia />
       </div>
     )
   }
 }
 
-export default Campaign;
+export default CampaignItem;

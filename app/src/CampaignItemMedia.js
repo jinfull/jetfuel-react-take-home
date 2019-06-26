@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CampaignMedia extends React.Component {
+class CampaignItemMedia extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -12,4 +12,4 @@ class CampaignMedia extends React.Component {
   }
 }
 
-export default CampaignMedia;
+export default CampaignItemMedia;

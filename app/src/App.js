@@ -1,11 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './styling/App.css';
-import Campaign from './Campaign';
+import CampaignItem from './CampaignItem';
+import CampaignList from './CampaignList';
+
 
 function App() {
   return (
-      <Campaign />
+      <div>
+        <CampaignItem />
+        <CampaignList />
+      </div>
     );
 }
 
