@@ -1,29 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './styling/App.css';
+import Campaign from './Campaign';
 
 function App() {
   return (
-    <div>
-      <div id='top-header'>hello</div>
-    </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-  );
+      <Campaign />
+    );
 }
 
 export default App;
