@@ -1,5 +1,5 @@
 import React from 'react';
-import CampaignItemMedia from './CampaignItemMedia';
+import CampaignItemMediaList from './CampaignItemMediaList';
 
 class CampaignItem extends React.Component {
   render() {
@@ -7,18 +7,16 @@ class CampaignItem extends React.Component {
 
     if (!campaign) return null;
 
-    console.log(campaign);
-
     return (
       <li className='campaign-li'>
         <div className='campaign-info'>
-          <img className='campaign-logo' src={this.props.campaign.campaign_icon_url}></img>
+          <img className='campaign-logo' src={campaign.campaign_icon_url}></img>
           <div className='campaign-details'>
             <div className='campaign-name'>{campaign.campaign_name}</div>
-            <div className='campaign-pay'>{campaign.pay_per_install} per install</div>
+            <div className='campaign-pay'><strong>{campaign.pay_per_install}</strong> per install</div>
           </div>
         </div>
-        <CampaignItemMedia campaign={this.props.campaign} />
+        <CampaignItemMediaList campaign={this.props.campaign} />
       </li>
     )
   }

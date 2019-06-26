@@ -1,7 +1,15 @@
+/* General Styling */
+
+ul {
+  list-style-type: none;
+}
+
 .header {
   height: 6vh;
   border-bottom: 1px solid rgb(211, 211, 211);
 }
+
+/* Campaign Specific */
 
 .campaign-info {
   display: flex;
@@ -19,10 +27,17 @@
 .campaign-details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-ul {
-  list-style-type: none;
+.campaign-name {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.campaign-pay {
+  color: green;
 }
 
 .campaign-li {
@@ -31,4 +46,23 @@ ul {
 
 .campaign-logo {
   border-radius: 20%;
+}
+
+/* Media Specific */
+
+.media-ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.media-li {
+  margin-right: 2%;
+}
+
+.media-preview {
+  height: 100%;
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid rgb(175, 175, 175);
 }

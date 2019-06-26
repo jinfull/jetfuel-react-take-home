@@ -22,15 +22,13 @@ class CampaignList extends React.Component {
         key={campaign.id}
       />
     ));
-    // console.log(campaigns);
 
     return(
-      <ul>
+      <ul className='campaign-ul'>
         { campaigns }
       </ul>
     )
   }
-
 }
 
 export default CampaignList;
