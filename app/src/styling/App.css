@@ -1,4 +1,21 @@
-#top-header {
+.header {
   height: 6vh;
   border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.campaign-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.campaign-logo {
+  width: 64px;
+  height: 64px;
+  background-color: green;
+  margin-right: 20px;
+}
+.campaign-details {
+  display: flex;
+  flex-direction: column;
+  
 }
